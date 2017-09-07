@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>هدهد</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="vendor/jquery/jquery.mobile.min.css" />
+        <link rel="stylesheet" href="vendor/jquery/jquery.mobile.min.rtl.css" />
+        <link rel="stylesheet" href="vendor/waves/waves.min.css" />
+        <link rel="stylesheet" href="vendor/wow/animate.css" />
+        <link rel="stylesheet" href="css/nativedroid2.css" />
+        <link rel="stylesheet" href="css/ND2rtl.css" />
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <style>
+            #leftpanel {
+                opacity: 0.9;
+                color: #fff;
+                background: linear-gradient(rgba(116, 130, 227, 0.5), rgb(116, 130, 227)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2utzkuX3AIBlULpNx1egsC7wIEP42by-RXBBTcgGGBE5GKHSy);
+                background-size: 100%;
+            }
+            .ui-li-divider {
+                color: #eee !important;
+                background-color: rgba(57, 73, 163, 0.82) !important;
+            }
+            li {
+                text-align: right ;
+            }
+        </style>
+    </head>
+    <body dir="rtl" >
+
+        <div data-role="page">
+
+            <nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
+
+            <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
+                <nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
+            </div>
+
+            <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+                <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
+                <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>الرئيسية</h1>
+                <!--                <img src="img/logo.jpg" alt="Low resolution logo" class="wow fadeIn" data-wow-delay='0.4s' />-->
+
+            </div>
+
+            <div role="main" class="ui-content" data-inset="false">
+                <p>مليارات حول العالم حيث لا إعلام معاصر يوصل لهم معنى الإسلام، وأصبح من الصعوبة بمكان إيصال دين الرحمة لكل فرد منهم عبر السفر والطرق التقليدية.
+
+                    يسعى #مشروع_هدهد لتقديم الإسلام لهم بأجمل صورة عبر إعلام احترافي عالمي بلغات مختلفة؛ليغيروا مفهومهم الخاطئ عن دين السلام ومن ثم يدخلوا في دين الله أفواجا، ويقدّم لهم بعد ذلك مدرسة الكترونية ليتعلموا مبادئ دينهم..</p>
+
+
+                <div class="nd2-card" style="text-align: center">
+
+                    <a class="ui-btn ui-btn-raised clr-primary" href="http://bit.ly/Hodoud-3">
+                        <div class="card-title">
+                            <h3 class="">تبــــــــ(الآن)ــــــــرع</h3>
+                        </div>
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="vendor/jquery/jquery-ui.min.js"></script>
+        <script src="vendor/jquery/jquery.mobile.min.js"></script>
+        <script src="vendor/waves/waves.min.js"></script>
+        <script src="vendor/wow/wow.min.js"></script>
+        <script src="js/nativedroid2.js"></script>
+        <script src="nd2settings.js"></script>
+
+    </body>
+</html>
+
