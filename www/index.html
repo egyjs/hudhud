@@ -11,7 +11,9 @@
         <link rel="stylesheet" href="vendor/wow/animate.css" />
         <link rel="stylesheet" href="css/nativedroid2.css" />
         <link rel="stylesheet" href="css/ND2rtl.css" />
+        <link rel="stylesheet" href="css/material-refresh.min.css" />
 
+        
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -38,6 +40,11 @@
 
 
         </style>
+        <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
+        
+        
+        <script src="js/material-refresh.min.js"></script>
+
     </head>
     <body dir="rtl" >
 
@@ -50,7 +57,8 @@
             </div>
 
             <div data-role="header" data-position="fixed" class="wow fadeIn" data-wow-delay="0.2s">
-                <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
+                <!--                <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>-->
+                <a href="#" onclick="location.reload();" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-refresh"></i></a>
                 <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
                 <h1 class="wow fadeIn" data-wow-delay='0.4s'>الرئيسية</h1>
 
@@ -89,8 +97,7 @@
 
                         <div class="card-action">
                             <div class="align-right">
-                                <a class="twitter-timeline"  href="https://twitter.com/SafeerHudhud/" 
-                                   data-widget-id="906368093282283521"
+                                <a class="twitter-timeline"  href="https://twitter.com/SafeerHudhud" 
                                    data-link-color="#820bbb"
                                    data-chrome="nofooter"
                                    data-tweet-limit="3"
@@ -135,27 +142,29 @@
                                         js.src = "//connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.10";
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));</script>
-                                <div class="fb-video" data-href="https://www.facebook.com/100020529738875/videos/113179956042995/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/100020529738875/videos/113179956042995/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/100020529738875/videos/113179956042995/"></a><p>بعطائك.. يعرفون الإسلام..
+                                <div class="fb-video" data-href="https://www.facebook.com/100020529738875/videos/113179956042995/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/100020529738875/videos/113179956042995/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/100020529738875/videos/113179956042995/"></a>
+                                    <p style="font-size: 16px;line-height: 1.8em;white-space: pre-line;">بعطائك.. يعرفون الإسلام..
 
-                                    مليارات حول العالم حيث لا إعلام معاصر يوصل لهم معنى الإسلام، وأصبح من الصعوبة بمكان إيصال دين الرحمة لكل فرد منهم عبر السفر والطرق التقليدية.
+                                        مليارات حول العالم حيث لا إعلام معاصر يوصل لهم معنى الإسلام، وأصبح من الصعوبة بمكان إيصال دين الرحمة لكل فرد منهم عبر السفر والطرق التقليدية.
 
-                                    يسعى #مشروع_هدهد لتقديم الإسلام لهم بأجمل صورة عبر إعلام احترافي عالمي بلغات مختلفة؛ليغيروا مفهومهم الخاطئ عن دين السلام ومن ثم يدخلوا في دين الله أفواجا، ونقدّم لهم بعد ذلك مدرسة الكترونية ليتعلموا مبادئ دينهم..
+                                        يسعى #مشروع_هدهد لتقديم الإسلام لهم بأجمل صورة عبر إعلام احترافي عالمي بلغات مختلفة؛ليغيروا مفهومهم الخاطئ عن دين السلام ومن ثم يدخلوا في دين الله أفواجا، ونقدّم لهم بعد ذلك مدرسة الكترونية ليتعلموا مبادئ دينهم..
 
-                                    أهداف مشروع هدهد:
-                                    -تبليغ رسالة الإسلام بأجمل صورة.
-                                    -تصحيح المفاهيم الخاطئة عن الإسلام.
-                                    -استثمار التطور الإعلامي لتبليغ رسالة الإسلام.
+                                        أهداف مشروع هدهد:
+                                        -تبليغ رسالة الإسلام بأجمل صورة.
+                                        -تصحيح المفاهيم الخاطئة عن الإسلام.
+                                        -استثمار التطور الإعلامي لتبليغ رسالة الإسلام.
 
-                                    المرحلة الاولى: 50 ألف دينار كويتي.
-                                    -لكل 40 دينار يسلم شخص بإذن الله.
-                                    المساهمة تبدأ من دينار.
+                                        المرحلة الاولى: 50 ألف دينار كويتي.
+                                        -لكل 40 دينار يسلم شخص بإذن الله.
+                                        المساهمة تبدأ من دينار.
 
-                                    (للتبرع من داخل الكويت)يمكنكم التبرع عبر كي نت أو فيزا أو استقطاع شهري.
+                                        (للتبرع من داخل الكويت)يمكنكم التبرع عبر كي نت أو فيزا أو استقطاع شهري.
 
-                                    (للتبرع من خارج الكويت)يمكنكم التبرع عبر فيزا أو مستركارد أو تحويل بنكي.
+                                        (للتبرع من خارج الكويت)يمكنكم التبرع عبر فيزا أو مستركارد أو تحويل بنكي.
 
-                                    رابط التبرع الالكتروني
-                                    http://bit.ly/Hohoud-1</p>تم نشره بواسطة ‏<a href="https://www.facebook.com/people/&#x647;&#x62f;&#x647;&#x62f;-&#x633;&#x641;&#x64a;&#x631;-&#x633;&#x644;&#x627;&#x645;-&#x644;&#x644;&#x639;&#x627;&#x644;&#x645;/100020529738875">هدهد سفير سلام للعالم</a>‏ في 3 سبتمبر، 2017</blockquote></div>
+                                        رابط التبرع الالكتروني
+                                        <a href="http://bit.ly/Hohoud-1"></a>
+                                    </p>تم نشره بواسطة ‏<a href="https://www.facebook.com/people/&#x647;&#x62f;&#x647;&#x62f;-&#x633;&#x641;&#x64a;&#x631;-&#x633;&#x644;&#x627;&#x645;-&#x644;&#x644;&#x639;&#x627;&#x644;&#x645;/100020529738875">هدهد سفير سلام للعالم</a>‏ في 3 سبتمبر، 2017</blockquote></div>
                             </div>
 
                         </div>
@@ -188,7 +197,7 @@
 
                         <div class="card-action">
                             <div class="align-right">
-                                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:27.500000000000004% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BYdhMZIlruq/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank" style="text-align: right">-- بدأت حملة #EqualityInHajj لتعريف غير المسلمين بهذا الإسلام العظيم استثمر أعظم يوم وهو #يوم_عرفه بنشر رابط التبرع في البايو⬆️ -- #مشروع_هدهد للتعريف بالإسلام مرخص من وزارة الشؤون وتابع ل #جمعية_النجاة_الخيرية #الكويت #السعودية</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by HUDHUD (@hudhudsafeer) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-08-31T14:17:44+00:00">Aug 31, 2017 at 7:17am PDT</time></p></div></blockquote>
+                                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:27.500000000000004% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BYdhMZIlruq/" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:normal;line-height:17px;text-decoration:none;word-wrap: break-word;display: inline;height: auto;white-space: pre-line;" target="_blank" style="text-align: right">-- بدأت حملة #EqualityInHajj لتعريف غير المسلمين بهذا الإسلام العظيم استثمر أعظم يوم وهو #يوم_عرفه بنشر رابط التبرع في البايو⬆️ -- #مشروع_هدهد للتعريف بالإسلام مرخص من وزارة الشؤون وتابع ل #جمعية_النجاة_الخيرية #الكويت #السعودية</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by HUDHUD (@hudhudsafeer) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-08-31T14:17:44+00:00">Aug 31, 2017 at 7:17am PDT</time></p></div></blockquote>
                                 <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
                             </div>
 
@@ -219,6 +228,23 @@
         <script src="vendor/jquery/jquery.mobile.min.js"></script>
         <script src="vendor/waves/waves.min.js"></script>
         <script src="vendor/wow/wow.min.js"></script>
+        <script>
+            // Default options 
+                var opts = { 
+                    nav: '', //String, using for Type2 
+                    scrollEl: '', //String  
+                    onBegin: null, //Function 
+                    onEnd: function(){
+                        location.reload();
+                    }, //Function 
+                    top: '0px', //String 
+                    theme: 'mui-blue-theme', //String 
+                    index: 10001, //Number
+                    maxTime: 6000, //Number 
+                    freeze: false //Boolen 
+                }         
+                mRefresh(opts);
+        </script>
         <script src="js/nativedroid2.js"></script>
         <script src="nd2settings.js"></script>
 

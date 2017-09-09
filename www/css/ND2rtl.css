@@ -1,7 +1,5 @@
 blockquote:after{right:24px;border-width:48px 0 0 48px;border-color:#f6f6f6 transparent transparent transparent;}
 blockquote footer{margin:-1em 0px 1em 24px;}
-.align-right{text-align:left;}
-.align-left{text-align:right;}
 .ui-panel-position-left > .ui-panel-inner{right:0;left:0;}
 .ui-panel-dismiss.ui-panel-dismiss-open{right:0px;}
 .ui-collapsible-content > .ui-listview > li > a{padding-right:1.5em;}
