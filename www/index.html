@@ -139,7 +139,7 @@
                                         var js, fjs = d.getElementsByTagName(s)[0];
                                         if (d.getElementById(id)) return;
                                         js = d.createElement(s); js.id = id;
-                                        js.src = "//connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.10";
+                                        js.src = "https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.10";
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));</script>
                                 <div class="fb-video" data-href="https://www.facebook.com/100020529738875/videos/113179956042995/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/100020529738875/videos/113179956042995/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/100020529738875/videos/113179956042995/"></a>
@@ -231,7 +231,6 @@
         <script>
             // Default options 
                 var opts = { 
-                    nav: '', //String, using for Type2 
                     scrollEl: '', //String  
                     onBegin: null, //Function 
                     onEnd: function(){
@@ -240,10 +239,10 @@
                     top: '0px', //String 
                     theme: 'mui-blue-theme', //String 
                     index: 10001, //Number
-                    maxTime: 6000, //Number 
-                    freeze: false //Boolen 
+                    maxTime: 1000, //Number 
+                    freeze: true //Boolen 
                 }         
-                mRefresh(opts);
+//                mRefresh(opts);
         </script>
         <script src="js/nativedroid2.js"></script>
         <script src="nd2settings.js"></script>
