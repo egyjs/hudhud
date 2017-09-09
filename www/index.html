@@ -4,7 +4,7 @@
         <title>هدهد</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="vendor/jquery/jquery.mobile.min.css" />
         <link rel="stylesheet" href="vendor/jquery/jquery.mobile.min.rtl.css" />
         <link rel="stylesheet" href="vendor/waves/waves.min.css" />
@@ -41,7 +41,7 @@
     </head>
     <body dir="rtl" >
 
-        <div data-role="page">
+        <div data-role="page" class="nd2-no-menu-swipe">
 
             <nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
 
@@ -49,52 +49,154 @@
                 <nd2-include data-src="examples/fragments/bottom.sheet.html"></nd2-include>
             </div>
 
-            <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+            <div data-role="header" data-position="fixed" class="wow fadeIn" data-wow-delay="0.2s">
                 <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
                 <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
                 <h1 class="wow fadeIn" data-wow-delay='0.4s'>الرئيسية</h1>
-                <!--                <img src="img/logo.jpg" alt="Low resolution logo" class="wow fadeIn" data-wow-delay='0.4s' />-->
+
+                <ul data-role="nd2tabs" data-swipe="true" dir="ltr" style="text-align: center">
+                    <!--                    <li data-tab="colors">ساهم معنا</li>-->
+                    <li data-tab="vision">الرؤية والرسالة</li>
+                    <li data-tab="aboutus">من نحن</li>
+                    <li data-tab="home" data-tab-active="true">ما هو هدهد</li>
+                </ul>
+
 
             </div>
 
             <div role="main" class="ui-content" data-inset="false">
 
+                <div data-role="nd2tab" data-tab="home">
+                    <div class="nd2-card">
 
-                <div class="nd2-card">
+                        <div class="card-title has-avatar">
+                            <img class="card-avatar" src="http://lorempixel.com/200/200/city/">
+                            <h3 class="card-primary-title">مشروع هدهد</h3>
+                            <h5 class="card-subtitle">1</h5>
+                        </div>
 
-                    <div class="card-title has-avatar">
-                        <img class="card-avatar" src="http://lorempixel.com/200/200/">
-                        <h3 class="card-primary-title">مشروع هدهد</h3>
-                        <h5 class="card-subtitle">سفير السلام</h5>
-                    </div>
+                        <div class="card-media">
+                            <img src="img/injaz.jpg">
+                        </div>
 
-                    <div class="card-media">
-                        <img src="img/injaz.jpg">
-                    </div>
+                        <div class="card-supporting-text has-action">
+                            <p>                        مليارات حول العالم حيث لا إعلام معاصر يوصل لهم معنى الإسلام، وأصبح من الصعوبة بمكان إيصال دين الرحمة لكل فرد منهم عبر السفر والطرق التقليدية.</p>
+                            <p><br></p>
+                            <p> يسعى <strong><a href="https://twitter.com/search?q=%23%D9%85%D8%B4%D8%B1%D9%88%D8%B9_%D9%87%D8%AF%D9%87%D8%AF">#مشروع_هدهد</a></strong> لتقديم الإسلام لهم بأجمل صورة عبر إعلام احترافي عالمي بلغات مختلفة؛ليغيروا مفهومهم الخاطئ عن دين السلام ومن ثم يدخلوا في دين الله أفواجا، ويقدّم لهم بعد ذلك مدرسة الكترونية ليتعلموا مبادئ دينهم..</p>
+                        </div>
 
-                    <div class="card-supporting-text has-action">
-<p>                        مليارات حول العالم حيث لا إعلام معاصر يوصل لهم معنى الإسلام، وأصبح من الصعوبة بمكان إيصال دين الرحمة لكل فرد منهم عبر السفر والطرق التقليدية.</p>
-<p><br></p>
-                       <p> يسعى <strong><a href="https://twitter.com/search?q=%23%D9%85%D8%B4%D8%B1%D9%88%D8%B9_%D9%87%D8%AF%D9%87%D8%AF">#مشروع_هدهد</a></strong> لتقديم الإسلام لهم بأجمل صورة عبر إعلام احترافي عالمي بلغات مختلفة؛ليغيروا مفهومهم الخاطئ عن دين السلام ومن ثم يدخلوا في دين الله أفواجا، ويقدّم لهم بعد ذلك مدرسة الكترونية ليتعلموا مبادئ دينهم..</p>
-                    </div>
 
-                    <div class="card-action">
-                        <div class="align-right">
-                            <a class="twitter-timeline"  href="https://twitter.com/hashtag/%D9%85%D8%B4%D8%B1%D9%88%D8%B9_%D9%87%D8%AF%D9%87%D8%AF" 
-                               data-widget-id="906243637616488448"
-                               data-link-color="#820bbb"
-                               data-chrome="nofooter"
-                               data-tweet-limit="3"
-                               >تغريدات #مشروع_هدهد</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                        <div class="card-action">
+                            <div class="align-right">
+                                <a class="twitter-timeline"  href="https://twitter.com/SafeerHudhud/" 
+                                   data-widget-id="906368093282283521"
+                                   data-link-color="#820bbb"
+                                   data-chrome="nofooter"
+                                   data-tweet-limit="3"
+                                   >تغريدات ‎@SafeerHudhud‏</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                            </div>
 
                         </div>
 
-                    </div>
 
+                    </div>
                 </div>
 
+                <div data-role="nd2tab" data-tab="aboutus">
+                    <div class="nd2-card">
 
+                        <div class="card-title has-avatar">
+                            <img class="card-avatar" src="http://lorempixel.com/200/200/city/">
+                            <h3 class="card-primary-title">من نحن</h3>
+                            <h5 class="card-subtitle">2</h5>
+                        </div>
+
+                        <div class="card-media">
+                            <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAXAAAAAJDcwZTlmNjBjLTJiYTctNDRkMi1iMzJkLTFjZmE3NzkyOTNiYQ.png">
+                        </div>
+
+                        <div class="card-supporting-text has-action">
+                            <p>مشروع هدهد للتعريف بالإسلام تابع لجمعية النجاة الخيرية الكويتية و مسجل بوزارة الشؤون الاجتماعية والعمل برقم</p>
+                            <p><strong>1454</strong></p>
+                        </div>
+
+
+
+                        <div class="card-action">
+                            <div class="align-right">
+                                <div id="fb-root"></div>
+                                <script>(function(d, s, id) {
+                                        var js, fjs = d.getElementsByTagName(s)[0];
+                                        if (d.getElementById(id)) return;
+                                        js = d.createElement(s); js.id = id;
+                                        js.src = "//connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.10";
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }(document, 'script', 'facebook-jssdk'));</script>
+                                <div class="fb-video" data-href="https://www.facebook.com/100020529738875/videos/113179956042995/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/100020529738875/videos/113179956042995/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/100020529738875/videos/113179956042995/"></a><p>بعطائك.. يعرفون الإسلام..
+
+                                    مليارات حول العالم حيث لا إعلام معاصر يوصل لهم معنى الإسلام، وأصبح من الصعوبة بمكان إيصال دين الرحمة لكل فرد منهم عبر السفر والطرق التقليدية.
+
+                                    يسعى #مشروع_هدهد لتقديم الإسلام لهم بأجمل صورة عبر إعلام احترافي عالمي بلغات مختلفة؛ليغيروا مفهومهم الخاطئ عن دين السلام ومن ثم يدخلوا في دين الله أفواجا، ونقدّم لهم بعد ذلك مدرسة الكترونية ليتعلموا مبادئ دينهم..
+
+                                    أهداف مشروع هدهد:
+                                    -تبليغ رسالة الإسلام بأجمل صورة.
+                                    -تصحيح المفاهيم الخاطئة عن الإسلام.
+                                    -استثمار التطور الإعلامي لتبليغ رسالة الإسلام.
+
+                                    المرحلة الاولى: 50 ألف دينار كويتي.
+                                    -لكل 40 دينار يسلم شخص بإذن الله.
+                                    المساهمة تبدأ من دينار.
+
+                                    (للتبرع من داخل الكويت)يمكنكم التبرع عبر كي نت أو فيزا أو استقطاع شهري.
+
+                                    (للتبرع من خارج الكويت)يمكنكم التبرع عبر فيزا أو مستركارد أو تحويل بنكي.
+
+                                    رابط التبرع الالكتروني
+                                    http://bit.ly/Hohoud-1</p>تم نشره بواسطة ‏<a href="https://www.facebook.com/people/&#x647;&#x62f;&#x647;&#x62f;-&#x633;&#x641;&#x64a;&#x631;-&#x633;&#x644;&#x627;&#x645;-&#x644;&#x644;&#x639;&#x627;&#x644;&#x645;/100020529738875">هدهد سفير سلام للعالم</a>‏ في 3 سبتمبر، 2017</blockquote></div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div data-role="nd2tab" data-tab="vision">
+                    <div class="nd2-card">
+
+                        <div class="card-title has-avatar">
+                            <img class="card-avatar" src="http://lorempixel.com/200/200/city/">
+                            <h3 class="card-primary-title">مشروع هدهد</h3>
+                            <h5 class="card-subtitle">3</h5>
+                        </div>
+
+                        <div class="card-media">
+                            <img src="img/injaz.jpg">
+                        </div>
+
+                        <div class="card-supporting-text has-action">
+                            <h3><strong>الرؤية</strong></h3>
+                            <p>الريادة في صناعة إعلام دعوي عالمي يبلغ رسالة الإسلام.</p>
+                            <h3><strong>الرسالة</strong></h3>
+                            <p>مشروع إعلامي دعوي عالمي يهدف لتبليغ رسالة الإسلام</p>
+                        </div>
+
+
+
+                        <div class="card-action">
+                            <div class="align-right">
+                                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:27.500000000000004% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BYdhMZIlruq/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank" style="text-align: right">-- بدأت حملة #EqualityInHajj لتعريف غير المسلمين بهذا الإسلام العظيم استثمر أعظم يوم وهو #يوم_عرفه بنشر رابط التبرع في البايو⬆️ -- #مشروع_هدهد للتعريف بالإسلام مرخص من وزارة الشؤون وتابع ل #جمعية_النجاة_الخيرية #الكويت #السعودية</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by HUDHUD (@hudhudsafeer) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-08-31T14:17:44+00:00">Aug 31, 2017 at 7:17am PDT</time></p></div></blockquote>
+                                <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
 
                 <div class="nd2-card" style="text-align: center">
 
@@ -112,7 +214,7 @@
         </div>
 
         <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
-        <script src="cordova.js"></script>
+        <!--        <script src="cordova.js"></script>-->
         <script src="vendor/jquery/jquery-ui.min.js"></script>
         <script src="vendor/jquery/jquery.mobile.min.js"></script>
         <script src="vendor/waves/waves.min.js"></script>
