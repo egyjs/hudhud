@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/ND2rtl.css" />
         <link rel="stylesheet" href="css/material-refresh.min.css" />
 
-        
+
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -38,13 +38,57 @@
                 text-shadow: 0 1px 0 #f3f3f3;
             }
 
-
+            #overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(63, 81, 181, 0.25);
+                z-index: 2;
+                cursor: pointer;
+                color: #fff;
+                text-shadow: 2px 0px #2b2929;
+            }
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -25px;
+                margin-left: -50px;
+            }
         </style>
         <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
-        
-        
-        <script src="js/material-refresh.min.js"></script>
 
+
+        <script>
+
+            function playfrom0(id) { 
+                var vid = document.getElementById(id);
+                if (vid.currentTime == 23){
+                    vid.currentTime=0;
+                }
+                if (vid.paused) {
+                    vid.play(); 
+                    off();
+                } else {
+                    vid.pause();
+                    on();
+                }
+
+
+
+            }
+
+            function on() {
+                document.getElementById("overlay").style.opacity = "1";
+            }
+
+            function off() {
+                document.getElementById("overlay").style.opacity = "0";
+            }
+
+        </script>
     </head>
     <body dir="rtl" >
 
@@ -66,7 +110,7 @@
                     <!--                    <li data-tab="colors">ساهم معنا</li>-->
                     <li data-tab="vision">الرؤية والرسالة</li>
                     <li data-tab="aboutus">من نحن</li>
-                    <li data-tab="home" data-tab-active="true">ما هو هدهد</li>
+                    <li data-tab="home" data-tab-active="true">مشروع هدهد</li>
                 </ul>
 
 
@@ -79,11 +123,20 @@
 
                         <div class="card-title has-avatar">
                             <img class="card-avatar" src="http://lorempixel.com/200/200/city/">
-                            <h3 class="card-primary-title">مشروع هدهد</h3>
+                            <h3 class="card-primary-title">هدهد</h3>
                         </div>
 
                         <div class="card-media">
-                            <video controls
+                            <div id="overlay" class="card-media" onclick="playfrom0('min1');">
+                                <div class="center" style="margin-left: 0;">
+                                    <i class="zmdi zmdi-play zmdi-hc-4x"></i>
+                                </div>
+                            </div>
+                            <!--                            <button onclick="playfrom0('min1');">play </button>-->
+                            <video id="min1"  width="100%" poster=""  >
+                                <source src="vid/1min.mp4#t=23" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
 
                         <div class="card-supporting-text has-action">
@@ -163,27 +216,12 @@
         </div>
 
         <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
-                <script src="cordova.js"></script>
+        <script src="cordova.js"></script>
         <script src="vendor/jquery/jquery-ui.min.js"></script>
         <script src="vendor/jquery/jquery.mobile.min.js"></script>
         <script src="vendor/waves/waves.min.js"></script>
         <script src="vendor/wow/wow.min.js"></script>
-        <script>
-            // Default options 
-                var opts = { 
-                    scrollEl: '', //String  
-                    onBegin: null, //Function 
-                    onEnd: function(){
-                        location.reload();
-                    }, //Function 
-                    top: '0px', //String 
-                    theme: 'mui-blue-theme', //String 
-                    index: 10001, //Number
-                    maxTime: 1000, //Number 
-                    freeze: true //Boolen 
-                }         
-//                mRefresh(opts);
-        </script>
+
         <script src="js/nativedroid2.js"></script>
         <script src="nd2settings.js"></script>
 
