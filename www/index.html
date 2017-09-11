@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="vendor/wow/animate.css" />
         <link rel="stylesheet" href="css/nativedroid2.css" />
         <link rel="stylesheet" href="css/ND2rtl.css" />
-        <link rel="stylesheet" href="css/material-refresh.min.css" />
 
 
         <meta name="mobile-web-app-capable" content="yes">
@@ -38,7 +37,7 @@
                 text-shadow: 0 1px 0 #f3f3f3;
             }
 
-            #overlay {
+            .overlay {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -48,7 +47,7 @@
                 z-index: 2;
                 cursor: pointer;
                 color: #fff;
-                text-shadow: 2px 0px #2b2929;
+                text-shadow: 2px 3px 2px #2196F3;
             }
             .center {
                 position: absolute;
@@ -57,6 +56,10 @@
                 margin-top: -25px;
                 margin-left: -50px;
             }
+            .ui-btn.ui-input-clear {
+                background-color: rgba(255, 24, 24, 0.79);
+            }
+
         </style>
         <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
 
@@ -65,7 +68,7 @@
 
             function playfrom0(id) { 
                 var vid = document.getElementById(id);
-                if (vid.currentTime == 23){
+                if (vid.currentTime == 55){
                     vid.currentTime=0;
                 }
                 if (vid.paused) {
@@ -81,18 +84,25 @@
             }
 
             function on() {
-                document.getElementById("overlay").style.opacity = "1";
+                document.getElementById("overVid").style.opacity = "1";
             }
 
             function off() {
-                document.getElementById("overlay").style.opacity = "0";
+                document.getElementById("overVid").style.opacity = "0";
+            }
+            function toggleButton(ref,bttnID){
+                document.getElementById(bttnID).disabled= ((ref.value !== ref.defaultValue) ? false : true);
             }
 
         </script>
     </head>
     <body dir="rtl" >
-
-        <div data-role="page" class="nd2-no-menu-swipe">
+        <div class="overlay" id="dntLod" style="display: none;z-index: 9999;background-color: rgba(33, 150, 243, 0.77);">
+        <div class="center" >
+            <img src="https://alnajat-afpza4r.netdna-ssl.com/donation/wp-content/uploads/heart22.svg" alt="load" >
+        </div>
+        </div>
+        <div data-role="page" class="nd2-no-menu-swipe" id="home">
 
             <nd2-include data-src="examples/fragments/panel.left.html"></nd2-include>
 
@@ -109,7 +119,7 @@
                 <ul data-role="nd2tabs" data-swipe="true" dir="ltr" style="text-align: center">
                     <!--                    <li data-tab="colors">ساهم معنا</li>-->
                     <li data-tab="vision">الرؤية والرسالة</li>
-                    <li data-tab="aboutus">من نحن</li>
+                    <li data-tab="donate">تبرع الآن</li>
                     <li data-tab="home" data-tab-active="true">مشروع هدهد</li>
                 </ul>
 
@@ -127,14 +137,14 @@
                         </div>
 
                         <div class="card-media">
-                            <div id="overlay" class="card-media" onclick="playfrom0('min1');">
-                                <div class="center" style="margin-left: 0;">
+                            <div id="overVid" class="overlay" onclick="playfrom0('min1');">
+                                <div class="center" style="margin-left: -12px;margin-top: -30px;">
                                     <i class="zmdi zmdi-play zmdi-hc-4x"></i>
                                 </div>
                             </div>
                             <!--                            <button onclick="playfrom0('min1');">play </button>-->
                             <video id="min1"  width="100%" poster=""  >
-                                <source src="vid/1min.mp4#t=23" type="video/mp4">
+                                <source src="vid/1min.mp4#t=55" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -150,59 +160,43 @@
                     </div>
                 </div>
 
-                <div data-role="nd2tab" data-tab="aboutus">
+                <div data-role="nd2tab" data-tab="donate">
                     <div class="nd2-card">
 
-                        <div class="card-title has-avatar">
-                            <img class="card-avatar" src="http://lorempixel.com/200/200/city/">
-                            <h3 class="card-primary-title">من نحن</h3>
-                            <h5 class="card-subtitle">2</h5>
-                        </div>
-
-                        <div class="card-media">
-                            <img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAXAAAAAJDcwZTlmNjBjLTJiYTctNDRkMi1iMzJkLTFjZmE3NzkyOTNiYQ.png">
-                        </div>
-
                         <div class="card-supporting-text has-action">
-                            <p>مشروع هدهد للتعريف بالإسلام تابع لجمعية النجاة الخيرية الكويتية و مسجل بوزارة الشؤون الاجتماعية والعمل برقم</p>
-                            <p><strong>1454</strong></p>
+                            <h2>تبرع الأن!</h2>
+                            <h4>لنشر الإسلام عالميا</h4>
+                            <p>
+                                <label for="priceindex">اضف مبلغ التبرع:</label>
+                                <input onkeyup="toggleButton(this,'supDI');" type="number" min="1" name="pricD" id="priceindex" value="" data-clear-btn="true" placeholder="مبلغ التبرع">
+                            </p>
                         </div>
+                        <div class="card-action">
+                            <div class="row between-xs">
+                                <div class="col-xs-4">
+                                    <div class="box">
+                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
+                                        <a href="http://bit.ly/Hodoud-3" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-link'></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-8 align-left">
+                                    <div class="box">
+                                        <button disabled id="supDI" onclick="donate('#priceindex')" class="ui-btn ui-btn-raised  ui-btn-inline">تبرُع</button>
+                                    </div>
+                                </div>
+                            </div>
 
 
+                        </div>
 
                     </div>
                 </div>
 
-                <div data-role="nd2tab" data-tab="vision">
-                    <div class="nd2-card">
 
-                        <div class="card-title has-avatar">
-                            <img class="card-avatar" src="http://lorempixel.com/200/200/city/">
-                            <h3 class="card-primary-title">مشروع هدهد</h3>
-                            <h5 class="card-subtitle">3</h5>
-                        </div>
-
-                        <div class="card-media">
-                            <img src="img/injaz.jpg">
-                        </div>
-
-                        <div class="card-supporting-text has-action">
-                            <h3><strong>الرؤية</strong></h3>
-                            <p>الريادة في صناعة إعلام دعوي عالمي يبلغ رسالة الإسلام.</p>
-                            <h3><strong>الرسالة</strong></h3>
-                            <p>مشروع إعلامي دعوي عالمي يهدف لتبليغ رسالة الإسلام</p>
-                        </div>
-
-
-
-
-
-                    </div>
-                </div>
 
                 <div class="nd2-card" style="text-align: center">
 
-                    <a class="ui-btn ui-btn-raised clr-primary" href="http://bit.ly/Hodoud-3">
+                    <a class="ui-btn ui-btn-raised clr-primary" href="#donate"  data-transition="pop">
                         <div class="card-title">
                             <h3 class="">تبــــــــ(الآن)ــــــــرع</h3>
                         </div>
@@ -214,15 +208,31 @@
             </div>
 
         </div>
+        
+        <!-- Start of second page: #two -->
+<div data-role="page" id="donate" >
 
+	<div data-role="header">
+        <a href="#home" class="ui-btn ui-btn-left wow fadeIn" data-direction="reverse" data-wow-delay='0.8s'>
+            <i class="zmdi zmdi-long-arrow-left"></i>
+        </a>
+         
+		<h1>فاتورة</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" style="margin: 0;padding: 0;">	
+	   <iframe style="height: 100vh;width: 100vw;" id="iframeDonate" src="http://bit.ly/Hodoud-3" ></iframe>
+	</div><!-- /content -->
+	
+
+</div><!-- /page two -->
         <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
         <script src="cordova.js"></script>
         <script src="vendor/jquery/jquery-ui.min.js"></script>
         <script src="vendor/jquery/jquery.mobile.min.js"></script>
         <script src="vendor/waves/waves.min.js"></script>
-        <script src="vendor/wow/wow.min.js"></script>
-
         <script src="js/nativedroid2.js"></script>
+        <script src="js/script.js"></script>
         <script src="nd2settings.js"></script>
 
     </body>
